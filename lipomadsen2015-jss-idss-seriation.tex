@@ -1,0 +1,195 @@
+\documentclass[article]{jss}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% almost as usual
+\author{Carl P. Lipo\\California State University at Long Beach \And 
+        Mark E. Madsen\\University of Washington}
+\title{Archaeological Seriation with the \pkg{IDSS} Algorithm}
+
+%% for pretty printing and a nice hypersummary also set:
+\Plainauthor{Achim Zeileis, Second Author} %% comma-separated
+\Plaintitle{IDSS Seriation:  An Overview} %% without formatting
+\Shorttitle{\pkg{IDSS Seriation}: An Overview} %% a short title (if necessary)
+
+%% an abstract and keywords
+\Abstract{
+  Lorem ipsum sic dolor amet.
+}
+\Keywords{seriation, ordering algorithms, archaeology, cultural transmission, \proglang{Python}}
+\Plainkeywords{seriation, ordering algorithms, archaeology, cultural transmission, Python} %% without formatting
+%% at least one keyword must be supplied
+
+%% publication information
+%% NOTE: Typically, this can be left commented and will be filled out by the technical editor
+%% \Volume{50}
+%% \Issue{9}
+%% \Month{June}
+%% \Year{2012}
+%% \Submitdate{2012-06-04}
+%% \Acceptdate{2012-06-04}
+
+%% The address of (at least) one author should be given
+%% in the following format:
+\Address{
+  Carl P. Lipo\\
+  Department of Anthropology and IIRMES\\
+  California State University at Long Beach\\
+  1250 Bellflower Blvd., Long Beach, CA 90840, USA\\
+  E-mail: \email{clipo@csulb.edu}\\
+  URL: \url{http://lipolab.org}
+}
+
+%\Address{
+%	Mark E. Madsen\\
+%	Department of Anthropology\\
+%	Box 353100\\
+%	University of Washington\\
+%	Seattle, WA 98195, USA\\
+%	E-mail: \email{mark@madsenlab.org}\\
+%	URL: \url{http://notebook.madsenlab.org}
+%}
+%% It is also possible to add a telephone and fax number
+%% before the e-mail in the following format:
+%% Telephone: +43/512/507-7103
+%% Fax: +43/512/507-2851
+
+%% for those who use Sweave please include the following line (with % symbols):
+%% need no \usepackage{Sweave.sty}
+
+%% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Introduction}\label{introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+sollicitudin sapien, eu auctor sem dignissim faucibus. Nulla auctor
+tellus tempus mauris ultricies sodales. Donec dignissim nisi sit amet
+urna ornare tempus. Fusce eleifend arcu lacus, sodales imperdiet justo
+varius eu. Cras diam eros, vulputate vitae volutpat at, convallis id
+ligula. Ut porta mollis suscipit. Sed et tincidunt tellus. Nunc laoreet
+quam a tellus hendrerit malesuada. Donec rhoncus cursus eros, id blandit
+dolor tincidunt at. Sed euismod magna augue, ac finibus urna consequat
+at. Quisque orci mi, malesuada eget dignissim at, egestas ut nisi. Nulla
+porttitor laoreet odio, quis consectetur neque interdum ut.
+
+Phasellus congue tincidunt erat, nec bibendum neque pharetra eu. Morbi
+commodo sit amet neque vitae eleifend. Nulla pellentesque odio nibh,
+elementum ullamcorper felis tincidunt a. Ut in porttitor nisl, at
+sodales ex. Mauris eget sodales nunc, nec volutpat erat. Nunc eu purus
+purus. Praesent vestibulum egestas massa, eu cursus erat. Vivamus sit
+amet varius justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+
+\section{Literature Review}\label{literature-review}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+sollicitudin sapien, eu auctor sem dignissim faucibus. Nulla auctor
+tellus tempus mauris ultricies sodales. Donec dignissim nisi sit amet
+urna ornare tempus. Fusce eleifend arcu lacus, sodales imperdiet justo
+varius eu. Cras diam eros, vulputate vitae volutpat at, convallis id
+ligula. Ut porta mollis suscipit. Sed et tincidunt tellus. Nunc laoreet
+quam a tellus hendrerit malesuada. Donec rhoncus cursus eros, id blandit
+dolor tincidunt at. Sed euismod magna augue, ac finibus urna consequat
+at. Quisque orci mi, malesuada eget dignissim at, egestas ut nisi. Nulla
+porttitor laoreet odio, quis consectetur neque interdum ut.
+
+Phasellus congue tincidunt erat, nec bibendum neque pharetra eu. Morbi
+commodo sit amet neque vitae eleifend. Nulla pellentesque odio nibh,
+elementum ullamcorper felis tincidunt a. Ut in porttitor nisl, at
+sodales ex. Mauris eget sodales nunc, nec volutpat erat. Nunc eu purus
+purus. Praesent vestibulum egestas massa, eu cursus erat. Vivamus sit
+amet varius justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+
+\section{Algorithm}\label{algorithm}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+sollicitudin sapien, eu auctor sem dignissim faucibus. Nulla auctor
+tellus tempus mauris ultricies sodales. Donec dignissim nisi sit amet
+urna ornare tempus. Fusce eleifend arcu lacus, sodales imperdiet justo
+varius eu. Cras diam eros, vulputate vitae volutpat at, convallis id
+ligula. Ut porta mollis suscipit. Sed et tincidunt tellus. Nunc laoreet
+quam a tellus hendrerit malesuada. Donec rhoncus cursus eros, id blandit
+dolor tincidunt at. Sed euismod magna augue, ac finibus urna consequat
+at. Quisque orci mi, malesuada eget dignissim at, egestas ut nisi. Nulla
+porttitor laoreet odio, quis consectetur neque interdum ut.
+
+Phasellus congue tincidunt erat, nec bibendum neque pharetra eu. Morbi
+commodo sit amet neque vitae eleifend. Nulla pellentesque odio nibh,
+elementum ullamcorper felis tincidunt a. Ut in porttitor nisl, at
+sodales ex. Mauris eget sodales nunc, nec volutpat erat. Nunc eu purus
+purus. Praesent vestibulum egestas massa, eu cursus erat. Vivamus sit
+amet varius justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+
+\section{Usage}\label{usage}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+sollicitudin sapien, eu auctor sem dignissim faucibus. Nulla auctor
+tellus tempus mauris ultricies sodales. Donec dignissim nisi sit amet
+urna ornare tempus. Fusce eleifend arcu lacus, sodales imperdiet justo
+varius eu. Cras diam eros, vulputate vitae volutpat at, convallis id
+ligula. Ut porta mollis suscipit. Sed et tincidunt tellus. Nunc laoreet
+quam a tellus hendrerit malesuada. Donec rhoncus cursus eros, id blandit
+dolor tincidunt at. Sed euismod magna augue, ac finibus urna consequat
+at. Quisque orci mi, malesuada eget dignissim at, egestas ut nisi. Nulla
+porttitor laoreet odio, quis consectetur neque interdum ut.
+
+Phasellus congue tincidunt erat, nec bibendum neque pharetra eu. Morbi
+commodo sit amet neque vitae eleifend. Nulla pellentesque odio nibh,
+elementum ullamcorper felis tincidunt a. Ut in porttitor nisl, at
+sodales ex. Mauris eget sodales nunc, nec volutpat erat. Nunc eu purus
+purus. Praesent vestibulum egestas massa, eu cursus erat. Vivamus sit
+amet varius justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+
+\section{The Late Prehistoric Lower Mississippi River
+Valley}\label{the-late-prehistoric-lower-mississippi-river-valley}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+sollicitudin sapien, eu auctor sem dignissim faucibus. Nulla auctor
+tellus tempus mauris ultricies sodales. Donec dignissim nisi sit amet
+urna ornare tempus. Fusce eleifend arcu lacus, sodales imperdiet justo
+varius eu. Cras diam eros, vulputate vitae volutpat at, convallis id
+ligula. Ut porta mollis suscipit. Sed et tincidunt tellus. Nunc laoreet
+quam a tellus hendrerit malesuada. Donec rhoncus cursus eros, id blandit
+dolor tincidunt at. Sed euismod magna augue, ac finibus urna consequat
+at. Quisque orci mi, malesuada eget dignissim at, egestas ut nisi. Nulla
+porttitor laoreet odio, quis consectetur neque interdum ut.
+
+Phasellus congue tincidunt erat, nec bibendum neque pharetra eu. Morbi
+commodo sit amet neque vitae eleifend. Nulla pellentesque odio nibh,
+elementum ullamcorper felis tincidunt a. Ut in porttitor nisl, at
+sodales ex. Mauris eget sodales nunc, nec volutpat erat. Nunc eu purus
+purus. Praesent vestibulum egestas massa, eu cursus erat. Vivamus sit
+amet varius justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+
+\section{Conclusion}\label{conclusion}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
+sollicitudin sapien, eu auctor sem dignissim faucibus. Nulla auctor
+tellus tempus mauris ultricies sodales. Donec dignissim nisi sit amet
+urna ornare tempus. Fusce eleifend arcu lacus, sodales imperdiet justo
+varius eu. Cras diam eros, vulputate vitae volutpat at, convallis id
+ligula. Ut porta mollis suscipit. Sed et tincidunt tellus. Nunc laoreet
+quam a tellus hendrerit malesuada. Donec rhoncus cursus eros, id blandit
+dolor tincidunt at. Sed euismod magna augue, ac finibus urna consequat
+at. Quisque orci mi, malesuada eget dignissim at, egestas ut nisi. Nulla
+porttitor laoreet odio, quis consectetur neque interdum ut.
+
+Phasellus congue tincidunt erat, nec bibendum neque pharetra eu. Morbi
+commodo sit amet neque vitae eleifend. Nulla pellentesque odio nibh,
+elementum ullamcorper felis tincidunt a. Ut in porttitor nisl, at
+sodales ex. Mauris eget sodales nunc, nec volutpat erat. Nunc eu purus
+purus. Praesent vestibulum egestas massa, eu cursus erat. Vivamus sit
+amet varius justo. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+
+
+\end{document}
